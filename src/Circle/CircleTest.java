@@ -12,7 +12,7 @@ public class CircleTest {
     @Test
     public void circleAreaTest(){
         Circle circle = new Circle();
-        Assert.assertEquals(3.14, circle.getArea(), 0.01);
+        Assert.assertEquals(2.0, circle.getArea(), 0.01);
 
     }
     @Test

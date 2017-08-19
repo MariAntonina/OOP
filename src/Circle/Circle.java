@@ -33,6 +33,8 @@ public class Circle {
         return Math.PI * Math.pow(_radius, 2d);
     }
 
+    public double Circumference(){ return 2*Math.PI*_radius;}
+
     public String toString(){
         return "Circle[radius = " + _radius +
                 ",color = " + _color + "]";
