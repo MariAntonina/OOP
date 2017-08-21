@@ -5,7 +5,7 @@ package Time;
  */
 public class Time {
     private int _hour;
-    private  int _minute;
+    private int _minute;
     private int _second;
 
     public Time(int hour, int miniute, int second){
@@ -43,7 +43,12 @@ public class Time {
     public String toString() {
         return String.format("%d:%d:%d",_hour, _minute, _second);}
 
-//    public void Time nextSecond(){ _second = _second + 1;}
-//
-//    public void Time previousSecond(){_second = _second - 1;}
+    public Time nextSecond(){
+        _second = _second + 1;
+        return this;
+    }
+
+    public Time previousSecond(){
+        _second = _second - 1;
+        return this;}
 }
