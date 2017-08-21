@@ -26,15 +26,31 @@ public class BookTest {
         Book book = new Book("LotR", author, 23.99);
         Assert.assertEquals(23.99, book.getPrice(), 0.01);
     }
-
+@Test
     public void bookSetPriceTest(){
         Author author = new Author("Tolkien", "email", 'm');
         Book book = new Book("LotR", author, 23.99);
-        Assert.assertEquals(23.99, book.getPrice(), 0.01);
+        book.setPrice(765.98);
+        Assert.assertEquals(765.98, book.getPrice(), 0.01);
     }
     @Test
-    public void autorToStringTest(){
+    public void bookGetQtyTest(){
         Author author = new Author("Tolkien", "email", 'm');
-        Assert.assertEquals("Author[name =Tolkien, email =email, gender =m]", author.toString());
+        Book book = new Book("LotR", author, 23.99);
+
+        Assert.assertEquals(0, book.getQty());
+    }
+    @Test
+    public void bookSetQtyTest(){
+        Author author = new Author("Tolkien", "email", 'm');
+        Book book = new Book("LotR", author, 23.99);
+        book.setQty(67);
+        Assert.assertEquals(67, book.getQty());
+    }
+    @Test
+    public void bookToStringTest(){
+        Author author = new Author("Tolkien", "email", 'm');
+        Book book = new Book("LotR", author, 23.99);
+        Assert.assertEquals("Book[ name = LotR, Author[name =Tolkien, email =email, gender =m], price = 23,990000, qty = 0]", book.toString());
     }
 }
