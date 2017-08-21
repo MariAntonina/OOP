@@ -40,6 +40,10 @@ public class Employee {
         _lastName = lastName;
     }
 
+    public String getName(){
+        return String.format("%s %s", _firstName, _lastName);
+    }
+
     public int getSalary() {
         return _salary;
     }
@@ -54,9 +58,6 @@ public class Employee {
         return  _salary*(1 + percent);
     }
     public String toString(){
-        return  "Employee[id = " +_id +", name = "+_firstName +
-                ", lastname " + _lastName +
-                ", salary = " + _salary +" ]";
+        return String.format("Employee[id=%d,name=%s %s,salary=%d]", _id, _firstName, _lastName, _salary);
     }
-
 }

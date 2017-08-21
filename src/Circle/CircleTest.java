@@ -13,8 +13,8 @@ public class CircleTest {
     public void circleAreaTest(){
         Circle circle = new Circle();
         Assert.assertEquals(2.0, circle.getArea(), 0.01);
-
     }
+
     @Test
     public void circleDefaultRadiusTest(){
         Circle circle = new Circle();
