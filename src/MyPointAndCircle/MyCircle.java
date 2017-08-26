@@ -1,4 +1,4 @@
-package PointAndCircle;
+package MyPointAndCircle;
 
 /**
  * Created by admin on 21.08.2017.
@@ -35,6 +35,12 @@ public class MyCircle {
     public void setRadius(int radius) {
         _radius = radius;
     }
+
+    public int  getCenterX(){ return  _center.getX(); }
+
+    public void setCenterX(int x) { _center.setX(x);}
+
+
 
     public double getArea(){
         return Math.PI*Math.pow(_radius,2);

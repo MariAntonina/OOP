@@ -1,4 +1,4 @@
-package PointAndCircle;
+package MyPointAndCircle;
 
 /**
  * Created by admin on 21.08.2017.

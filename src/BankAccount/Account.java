@@ -1,7 +1,5 @@
 package BankAccount;
 
-import sun.util.resources.cldr.naq.CalendarData_naq_NA;
-
 /**
  * Created by admin on 21.08.2017.
  */
@@ -10,7 +8,7 @@ public class Account {
     private String _name;
     private int  _balance = 0;
 
-    public Account( String id, String name){_id = id; _name = name; }
+    public Account(String id, String name){_id = id ; _name = name; }
     public Account(String id, String name, int balance){ _id = id; _name = name; _balance = balance; }
     public String getId(){return _id;}
     public String getName(){ return _name;}
@@ -20,8 +18,8 @@ public class Account {
     private void addToBalance(int amount) {_balance = _balance + amount;}
 
     public int debit(int amount){
-        if(amount< _balance){
-            _balance= _balance- amount;
+        if(amount < _balance){
+            _balance= _balance - amount;
         }else{
             System.out.println("Amount exceeded balance");
         }
@@ -39,6 +37,6 @@ public class Account {
     }
 
     public String toString(){
-        return String.format("Account[id = %d, name = %s, balance = %d]", _id, _name, _balance);}
+        return String.format("Account[id = %s, name = %s, balance = %d]", _id, _name, _balance);}
 
 }

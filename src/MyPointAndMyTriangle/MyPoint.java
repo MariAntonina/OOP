@@ -1,4 +1,6 @@
-package PointAndCircle;
+package MyPointAndMyTriangle;
+
+import MyPointAndCircle.MyCircle;
 
 /**
  * Created by admin on 21.08.2017.
@@ -7,8 +9,8 @@ public class MyPoint {
     private int _x = 0;
     private int _y = 0;
 
-    public MyPoint(){}
-    public MyPoint( int x, int y){
+    public MyPoint(int i){}
+    public MyPoint(int x, int y){
         _x = x;
         _y = y;
     }
@@ -37,7 +39,7 @@ public class MyPoint {
     }
 
     public String toString() {
-        return String.format("[MyPoint{x = %d ,y = %d ]",_x , _y);
+        return String.format("[Point{x = %d ,y = %d ]",_x , _y);
     }
 
     public double distance(int x, int y){
@@ -50,5 +52,4 @@ public class MyPoint {
     public  double distance(MyCircle another){
         return Math.sqrt(Math.pow(_x ,2) + Math.pow(_y ,2));
     }
-
 }

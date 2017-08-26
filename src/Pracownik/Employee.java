@@ -54,9 +54,12 @@ public class Employee {
     public int getAnnualSalary(){
         return _salary*12;
     }
+
     public int raiseSalary(int percent){
-        return  _salary*(1 + percent);
+        _salary = (int)(_salary + _salary * (percent / 100d));
+        return _salary;
     }
+
     public String toString(){
         return String.format("Employee[id=%d,name=%s %s,salary=%d]", _id, _firstName, _lastName, _salary);
     }
