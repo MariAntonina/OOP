@@ -14,14 +14,13 @@ public class BirthDay {
     int _liveTimeInDays;
     int sex;
 
-    Person os = new Person("JAn","KOw", "34532535");
+    Person os;
 
     public void getDateBirth(){
         String  PESEL = os.getPESEL();
         _date = PESEL.substring(0,6);
         _day = Integer.parseInt(PESEL.substring(4,6));
         _month = Integer.parseInt(PESEL.substring(2,5));
-        _year = Integer.parseInt(PESEL.substring(0,2));
         sex = Integer.parseInt(PESEL.substring(10));
 
         if(sex%2 == 0){
@@ -29,7 +28,17 @@ public class BirthDay {
         }
         else _gender = 'M';
 
+        if(PESEL.indexOf(3)== 8 || PESEL.indexOf(3)== 9){
+            _year = Integer.parseInt("18" +PESEL.substring(0,2));}
+        else if(PESEL.indexOf(3)==0 || PESEL.indexOf(3)==0 ){
+            _year = Integer.parseInt("19" + PESEL.substring(0,2));}
+        else if (PESEL.indexOf(3)==2 || PESEL.indexOf(3)==3 ){
+            _year = Integer.parseInt("20" + PESEL.substring(0,2));}
+
+
+
+
+
         System.out.printf("%s, urodzila się %s. Do dziś przeżyła %d dni");
     }
-
 }

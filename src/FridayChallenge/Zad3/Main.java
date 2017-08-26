@@ -12,5 +12,8 @@ public class Main {
         Staff staf = new Staff("Wiktor", "ul.Pingwinowa 3", "Szkoła podopiecznych Wielkiego Balu",
                 456.789);
         System.out.println(staf);
+
+        Student stu = new Student("Wiktor", "ul.Pingwinowa 3", "Matematyczno-wokalny",
+                7, 9525.99);
     }
 }

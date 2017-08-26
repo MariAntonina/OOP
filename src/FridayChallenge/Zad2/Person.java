@@ -38,4 +38,8 @@ public class Person {
     }
 
 
+    public String toString(){
+        return String.format("Person[ name = %s, address = %s, PESEL = %s ]", _name, _surname, _PESEL);
+    }
+
 }
