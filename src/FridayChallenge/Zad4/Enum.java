@@ -14,25 +14,25 @@ public class Enum {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        ThrowOfCoin myMove = ThrowOfCoin.REVERSE;
+        ThrowOfCoin myGuess = ThrowOfCoin.REVERSE;
         ThrowOfCoin comMove = null;
 
         int goodGuess = 0;
         int wrongGuess = 0;
         int numOfGames = 0;
 
-        while (!myMove.equals(ThrowOfCoin.Q)) {
+        while (!myGuess.equals(ThrowOfCoin.Q)) {
             System.out.printf("Your guess:");
             String choice = sc.nextLine();
             switch (choice.toLowerCase()) {
                 case "r":
-                    myMove = ThrowOfCoin.REVERSE;
+                    myGuess = ThrowOfCoin.REVERSE;
                     break;
                 case "t":
-                    myMove = ThrowOfCoin.TAILS;
+                    myGuess = ThrowOfCoin.TAILS;
                     break;
                 case "q":
-                    myMove = ThrowOfCoin.Q;
+                    myGuess = ThrowOfCoin.Q;
                     break;
                 default:
                     continue;
@@ -48,13 +48,13 @@ public class Enum {
                 System.out.println("Computer pick  REVERSE");
             }
 
-            GameStats result = didIGuess(myMove, comMove);
+            GameStats result = didIGuess(myGuess, comMove);
 
             if (result.equals(GameStats.WIN))
                 goodGuess++;
             else if (result.equals(GameStats.LOSS))
                 wrongGuess++;
-            else// if(!result.equals(GameStats.WIN)|| !(result.equals(GameStats.WIN)))
+            else if(!result.equals(GameStats.WIN)|| !(result.equals(GameStats.WIN)))
                 System.out.println("The End");
 
             numOfGames++;
@@ -65,20 +65,20 @@ public class Enum {
                 wrongGuess, (double) wrongGuess / (numOfGames-1) * 100);
     }
 
-    public static GameStats didIGuess(ThrowOfCoin myMove, ThrowOfCoin comMove) {
-        if (myMove.equals(ThrowOfCoin.REVERSE) &&
+    public static GameStats didIGuess(ThrowOfCoin myGuess, ThrowOfCoin comMove) {
+        if (myGuess.equals(ThrowOfCoin.REVERSE) &&
                 comMove.equals(ThrowOfCoin.REVERSE))
             return GameStats.WIN;
 
-        if (myMove.equals(ThrowOfCoin.TAILS) &&
+        if (myGuess.equals(ThrowOfCoin.TAILS) &&
                 comMove.equals(ThrowOfCoin.REVERSE))
             return GameStats.LOSS;
 
-        if (myMove.equals(ThrowOfCoin.TAILS) &&
+        if (myGuess.equals(ThrowOfCoin.TAILS) &&
                 comMove.equals(ThrowOfCoin.TAILS))
             return GameStats.WIN;
 
-        if (myMove.equals(ThrowOfCoin.REVERSE) &&
+        if (myGuess.equals(ThrowOfCoin.REVERSE) &&
                 comMove.equals(ThrowOfCoin.TAILS))
             return GameStats.LOSS;
 
