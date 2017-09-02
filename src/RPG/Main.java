@@ -6,8 +6,14 @@ package RPG;
 public class Main {
     public static void main(String[] args) {
 
-        Bohater Czeslaw = new Bohater();
-        Tarcza tarcza = new TarczaSzeryfa();
+        Tarcza tarcza = new TarczaZZolwiaTeodora();
+        Miecz miecz = new DzikaTrabaMamuta();
+        Plecak plecak = new ZielarskiPlecakWloczykija();
+        Bohater Czeslaw = new Bohater("Czesław", tarcza, miecz, plecak);
+
+        System.out.printf("Nazwa: %s :: Zawartosc alkoholu %s, %s , %s",
+                Czeslaw);
+
 
 
     }

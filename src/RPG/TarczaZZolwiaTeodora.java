@@ -3,9 +3,9 @@ package RPG;
 /**
  * Created by admin on 02.09.2017.
  */
-public class TarczaSzeryfa extends Tarcza {
+public class TarczaZZolwiaTeodora extends Tarcza {
 
-    public TarczaSzeryfa(){_opis = "Tarcza szeryfa";}
+    public TarczaZZolwiaTeodora(){_opis = "Tarcza z zolwia Teodora";}
 
     @Override
     public double obrona() {
