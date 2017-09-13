@@ -1,5 +1,6 @@
 package SygnalRadiowy;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -7,27 +8,30 @@ import java.util.Random;
  */
 public class RadioFM implements IAnalog {
 
-    double[] anal;
-    public RadioFM() {
+     private double [] _anal;
+    public RadioFM() {}
+
+    public RadioFM(int lengthtrans){
         Random ran = new Random();
-        anal = new double[8];
-        anal =  ran.doubles( 8, 0.0, 2.0).toArray();
+        _anal = new double[8];
+        _anal =  ran.doubles( 8*lengthtrans, 0.0, 2.0).toArray();
     }
 
     @Override
     public double[] getAnalog() {
-        return new double[0];
+        return _anal;
     }
 
     @Override
     public void setAnalog(double[] analogData) {
-
+        _anal= _anal;
     }
 
     @Override
     public void printAnalog() {
-
+        for (double analo : _anal) {
+            System.out.printf(".2f", analo);
+        }
     }
-
-
 }
+

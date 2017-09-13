@@ -5,7 +5,12 @@ package Taxes;
  */
 public class USATaxes implements ITax {
     @Override
-    public double calculate(double price) {
+    public double calulateBrutto(double price) {
         return price*(1 + 0.15);
+    }
+
+    @Override
+    public String countrySignature(String sign) {
+        return "USA";
     }
 }

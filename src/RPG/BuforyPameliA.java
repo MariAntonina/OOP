@@ -3,7 +3,7 @@ package RPG;
 /**
  * Created by admin on 02.09.2017.
  */
-public class BuforyPameliA extends TarczaDekorator {
+public class BuforyPameliA extends TarczaDekorator{
 
     Tarcza _tarcza;
 
@@ -11,12 +11,9 @@ public class BuforyPameliA extends TarczaDekorator {
 
     @Override
     public String pobierzOpis() {
-        return _tarcza.pobierzOpis() + " Bufory Pameli A. ";
+        return _tarcza.pobierzOpis() + " Bufory Pameli A.";
     }
 
     @Override
-    public double obrona() {
-        return _tarcza.obrona() + 500;
-    }
-
+    public double obrona() { return _tarcza.obrona() + 500;}
 }

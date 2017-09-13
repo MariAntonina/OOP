@@ -9,12 +9,8 @@ public class DmuchanyBicepsHardkorowegoKoksa extends PlecakDekorator {
     public DmuchanyBicepsHardkorowegoKoksa(Plecak plecak){this._plecak = plecak;}
 
     @Override
-    public String pobierzOpis() {
-        return _plecak.pobierzOpis() + " Dmuchany biceps Hardkorowego Koksa";
-    }
+    public String pobierzOpis() {return _plecak.pobierzOpis() + " Dmuchany biceps Hardkorowego Koksa";}
 
     @Override
-    public double pojemnosc() {
-        return _plecak.pojemnosc() + 50;
-    }
+    public double pojemnosc() {return _plecak.pojemnosc() + 50;}
 }

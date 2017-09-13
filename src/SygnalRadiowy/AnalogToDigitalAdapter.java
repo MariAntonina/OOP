@@ -5,25 +5,34 @@ package SygnalRadiowy;
  */
 public class AnalogToDigitalAdapter implements IDIgitalSignal {
 
-    private  IAnalog _analog;
+    private IAnalog _analog;
 
-    public AnalogToDigitalAdapter(){
-//        _analog = analog;
+    public AnalogToDigitalAdapter(IAnalog analog) {
+        _analog = analog;
     }
 
     @Override
-    public double[] getDigit() {
-        return  _analog.getAnalog();
+    public int[] getDigit() {
+        return transformAnalogToDigit();
     }
 
     @Override
     public void setDigit(int[] digitData) {
-
-//        _analog.setAnalog();
     }
 
     @Override
     public void printDigit() {
+        int[] digiSign = transformAnalogToDigit();
+        for (int digi : digiSign) {
+            System.out.printf("%d", digi);
+        }
+    }
 
+    private int[] transformAnalogToDigit() {
+
+        return new int[0];
     }
 }
+
+
+

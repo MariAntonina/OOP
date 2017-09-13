@@ -10,11 +10,10 @@ public class RefleksLeniwca extends MieczDekorator {
     public RefleksLeniwca(Miecz miecz){this._miecz = miecz;}
 
     @Override
-    public String pobierzOpis() {
-        return _miecz.pobierzOpis() + " refleks Leniwca";}
+    public String pobierzOpis() {return _miecz.pobierzOpis() + " refleks Leniwca";}
 
     @Override
-    public double atak() {return _miecz.atak() + 77; }
+    public double atak() {return _miecz.atak() + 77;}
 
 
 }

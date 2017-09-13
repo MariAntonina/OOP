@@ -3,7 +3,7 @@ package RPG;
 /**
  * Created by admin on 02.09.2017.
  */
-public class BrzytwaHerkulesa extends  MieczDekorator {
+public class BrzytwaHerkulesa extends MieczDekorator {
 
     Miecz _miecz;
 

@@ -3,7 +3,7 @@ package RPG;
 /**
  * Created by admin on 30.08.2017.
  */
-public abstract class Tarcza   {
+public abstract class Tarcza{
 
     protected String _opis;
 

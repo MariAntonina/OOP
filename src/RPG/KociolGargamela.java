@@ -14,8 +14,5 @@ public class KociolGargamela extends PlecakDekorator {
     }
 
     @Override
-    public double pojemnosc() {
-        return _plecak.pojemnosc() + 180;
-    }
-
+    public double pojemnosc() {return _plecak.pojemnosc() + 180;}
 }

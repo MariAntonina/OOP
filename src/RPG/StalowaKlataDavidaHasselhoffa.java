@@ -4,6 +4,7 @@ package RPG;
  * Created by admin on 02.09.2017.
  */
 public class StalowaKlataDavidaHasselhoffa extends TarczaDekorator {
+
     Tarcza _tarcza;
 
     public StalowaKlataDavidaHasselhoffa(Tarcza tarcza){this._tarcza = tarcza;}

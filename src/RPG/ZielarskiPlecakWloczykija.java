@@ -5,7 +5,7 @@ package RPG;
  */
 public class ZielarskiPlecakWloczykija extends Plecak {
 
-    public ZielarskiPlecakWloczykija(){_opis = " Zielarski plecak Wloczykija";}
+    public ZielarskiPlecakWloczykija(){ _opis = " Zielarski plecak Wloczykija";}
 
     @Override
     public double pojemnosc() {
