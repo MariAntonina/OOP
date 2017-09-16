@@ -6,8 +6,23 @@ package FridayOneSeptChallenge.Zad1Strategia;
 public class Parzyste implements IOblicz {
 
     @Override
-    public int[] uruchom() {
+    public int[] uruchom(int[] tab) {
+        int count = 0;
+        for (int i = 0; i < tab.length; i++) {
+            if (tab[i] % 2 == 0) {
+                count++;
+            }
+        }
+        int[] tab1 = new int[count];
 
-        return new int[0];
+        count = 0;
+            for (int i = 0; i < tab.length; i++) {
+                if (tab[i] % 2 == 0) {
+                    tab1[count] = tab[i];
+                    count++;
+                }
+            }
+            return tab1;
     }
 }
+
